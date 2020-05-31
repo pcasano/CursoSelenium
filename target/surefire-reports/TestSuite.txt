@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 32.573 sec <<< FAILURE!
+checkTitle(CursoSeleniumTest)  Time elapsed: 6.166 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.name: username_ (tried for 2 second(s) with 200 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at CursoSeleniumTest.checkTitle(CursoSeleniumTest.java:56)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='username_']"}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-533NIJM', ip: '192.168.178.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\pablo\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56849}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 33d31e7c8d5aced226d849e168512e68
+*** Element info: {Using=name, value=username_}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 39 more
+
+primerTest(TestNGTests)  Time elapsed: 0.211 sec  <<< FAILURE!
+java.lang.AssertionError: The following asserts failed:
+	expected [Votar lostours] but found [Votar los tours]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at TestNGTests.primerTest(TestNGTests.java:62)
+

@@ -1,0 +1,7 @@
+com\cursoselenium\Pages\VoteToursPage.class
+com\cursoselenium\library\configuration\TestConfiguration.class
+com\cursoselenium\NewMain.class
+com\cursoselenium\Pages\LogInPage.class
+com\cursoselenium\library\configuration\ConfigFileReader.class
+com\cursoselenium\Pages\BasePage.class
+com\cursoselenium\Pages\SignUpPage.class

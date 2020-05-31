@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="3" failures="2" name="TestSuite" time="6.405" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="12.0.2+10"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.2\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\pablo\Documents\NetBeansProjects\CursoSelenium"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\pablo\Documents\NetBeansProjects\CursoSelenium"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="12.0.2+10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\pablo\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-12.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Calibre2\;C:\Program Files\Java\jdk-12.0.2\bin;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\Git\cmd;C:\Users\pablo\AppData\Local\Microsoft\WindowsApps;C:\Users\pablo\AppData\Local\GitHubDesktop\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.6.3\bin\../conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="56.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\pablo"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.specification.version" value="12"/>
+    <property name="user.name" value="pablo"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="12"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-12.0.2"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="12.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.6.3\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2019-07-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="CursoSeleniumTest" name="checkTitle" time="6.166">
+    <failure message="Expected condition failed: waiting for presence of element located by: By.name: username_ (tried for 2 second(s) with 200 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.name: username_ (tried for 2 second(s) with 200 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at CursoSeleniumTest.checkTitle(CursoSeleniumTest.java:56)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;username_&apos;]&quot;}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-533NIJM&apos;, ip: &apos;192.168.178.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\pablo\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56849}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 33d31e7c8d5aced226d849e168512e68
+*** Element info: {Using=name, value=username_}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 39 more
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@17d99928
+</system-out>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 21014
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1590320485.388][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
+[1590320487.425][WARNING]: Timed out connecting to Chrome, retrying...
+may. 24, 2020 1:41:29 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1590320491.550][WARNING]: Timed out connecting to Chrome, retrying...
+[1590320494.292][SEVERE]: Timed out receiving message from renderer: 0.100
+</system-err>
+  </testcase>
+  <testcase classname="TestNGTests" name="primerTest" time="0.211">
+    <failure message="The following asserts failed:
+	expected [Votar lostours] but found [Votar los tours]" type="java.lang.AssertionError">java.lang.AssertionError: The following asserts failed:
+	expected [Votar lostours] but found [Votar los tours]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at TestNGTests.primerTest(TestNGTests.java:62)
+</failure>
+    <system-err>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 38831
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1590320503.285][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
+[1590320505.294][WARNING]: Timed out connecting to Chrome, retrying...
+may. 24, 2020 1:41:47 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1590320507.925][SEVERE]: Timed out receiving message from renderer: 0.100
+[1590320511.506][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
+  <testcase classname="TestNGTests" name="segundoTest" time="0.028"/>
+</testsuite>
