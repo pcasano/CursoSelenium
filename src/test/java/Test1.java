@@ -24,7 +24,7 @@ public class Test1 extends TestConfiguration{
         logInPage.introduceEmail(configFileReader.getHashMap().get("user"));
         logInPage.introducePassword(configFileReader.getHashMap().get("password"));
         SignUpPage signUpPage = logInPage.goToSignUpPage();
-        signUpPage.introducename("prueba3");
+        signUpPage.introducename("prueba");
         signUpPage.goToVoteToursPage();
         
     }
