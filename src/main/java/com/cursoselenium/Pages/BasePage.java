@@ -14,23 +14,22 @@ import org.openqa.selenium.WebDriver;
  * @author pablo
  */
 public abstract class BasePage {
+
 protected WebDriver driver = TestConfiguration.driver;
-
-
 public abstract void confirmIdentity();
 
 public VoteToursPage goToVoteToursPage(){
-    driver.findElement(By.xpath("//*[text()='Usuarios']/parent::div//a[text()='Votar los tours']")).click();    
+    driver.findElement(By.xpath("//*[text()='Usuarios']/parent::div//a[text()='Votar los tours']")).click();
     return new VoteToursPage();
 }
 
 public LogInPage goToLogInPage(){
-    driver.findElement(By.xpath("//*[text()='Usuarios']/parent::div//a[text()='Iniciar sesión']")).click();    
+    driver.findElement(By.xpath("//*[text()='Usuarios']/parent::div//a[text()='Iniciar sesión']")).click();
     return new LogInPage();
 }
 
 public SignUpPage goToSignUpPage(){
-    driver.findElement(By.xpath("//*[text()='Usuarios']/parent::div//a[text()='Registrarse']")).click();    
+    driver.findElement(By.xpath("//*[text()='Usuarios']/parent::div//a[text()='Registrarse']")).click();
     return new SignUpPage();
 }
 

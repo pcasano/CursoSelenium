@@ -5,38 +5,41 @@
  */
 package com.cursoselenium.Pages;
 
-import com.cursoselenium.library.configuration.ConfigFileReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+
 
 /**
  *
  * @author pablo
  */
 public class LogInPage extends BasePage{
-    public LogInPage(){
+
+    public LogInPage() {
         this.confirmIdentity();
     }
+ 
     
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Inicio de sesión");
-    }
+        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Inicio de sesión");       
+    }  
     
     public void introduceEmail(String email){
         WebElement emailInput = this.driver.findElement(By.name("username"));
         emailInput.clear();
         emailInput.sendKeys(email);
     }
-    
     public void introducePassword(String password){
-        WebElement passwordInput = this.driver.findElement(By.name("password"));
-        passwordInput.clear();
-        passwordInput.sendKeys(password);
+        WebElement emailPassword = this.driver.findElement(By.name("password"));
+        emailPassword.clear();
+        emailPassword.sendKeys(password);
     }    
-  
     
+    public void clickOkButton(){
+        this.driver.findElement(By.name("ok")).click();
+    }  
     
     
 }

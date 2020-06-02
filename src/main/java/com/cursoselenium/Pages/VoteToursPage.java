@@ -13,16 +13,15 @@ import org.testng.Assert;
  * @author pablo
  */
 public class VoteToursPage extends BasePage{
-    public VoteToursPage(){
-        this.confirmIdentity();
-    }
-    
+public VoteToursPage(){
+    this.confirmIdentity();
+}
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Tours de votación");
+        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Tours de votación");   
     }
-    
-    public void clickOnAction(){
+   
+    public void clcikOnAction(){
         this.driver.findElement(By.xpath("//*[@class='ttitle' and text()='Acción']")).click();
     }
     

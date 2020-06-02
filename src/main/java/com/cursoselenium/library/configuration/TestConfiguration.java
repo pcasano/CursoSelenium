@@ -9,11 +9,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -29,12 +26,11 @@ import org.testng.annotations.BeforeClass;
 public class TestConfiguration {
     
     public static WebDriver driver;
-    public static ArrayList<String[]> listOfStackForReport;
     private final String PROPERTY_PATH = "C:\\Users\\pablo\\Documents\\NetBeansProjects\\cursoselenium\\Properties\\config.properties";  
     protected ConfigFileReader configFileReader = new ConfigFileReader();
         
     @BeforeClass
-    public void setUp() throws IllegalArgumentException, FileNotFoundException, IOException{
+    public void setUp() throws FileNotFoundException, IOException {
 
                 
         configFileReader.extractParameter();        
