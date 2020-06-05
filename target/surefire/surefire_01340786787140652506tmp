@@ -1,0 +1,8 @@
+#surefire_0
+#Fri Jun 05 20:37:27 CEST 2020
+basedir=C\:\\Users\\pablo\\Documents\\NetBeansProjects\\CursoSelenium
+test=Test1
+file.encoding=UTF-8
+user.dir=C\:\\Users\\pablo\\Documents\\NetBeansProjects\\CursoSelenium
+maven.ext.class.path=C\:\\Program Files\\NetBeans-11.2\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar
+localRepository=C\:\\Users\\pablo\\.m2\\repository

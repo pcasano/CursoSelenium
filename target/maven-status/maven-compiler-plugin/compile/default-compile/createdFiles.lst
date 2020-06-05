@@ -6,4 +6,5 @@ com\cursoselenium\Pages\LogInPage.class
 com\cursoselenium\library\configuration\ConfigFileReader.class
 com\cursoselenium\Pages\BasePage.class
 com\cursoselenium\library\actions\SeleniumActions.class
+com\cursoselenium\library\actions\XpathBuilder.class
 com\cursoselenium\Pages\SignUpPage.class
