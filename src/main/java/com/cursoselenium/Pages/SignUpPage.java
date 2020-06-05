@@ -23,18 +23,15 @@ public class SignUpPage extends BasePage{
     
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Regístrate (es gratis)");       
+        Assert.assertEquals(DRIVER.findElement(By.xpath("main-title"), "get text of element").getText(), "Regístrate (es gratis)");       
     }
     public void introduceName(String name){
-        WebElement emailInput = this.driver.findElement(By.name("nick"));
-        emailInput.clear();
-        emailInput.sendKeys(name);
+
+        DRIVER.fillInput(By.name("nick"), name, "introduce name: "+ name);
     }    
 
     public void introduceYear(String year){
-        WebElement emailYear = this.driver.findElement(By.name("year"));
-        emailYear.clear();
-        emailYear.sendKeys(year);
+        DRIVER.fillInput(By.name("year_"), 12 , year, "introduce year: "+ year);
     }     
     
 }

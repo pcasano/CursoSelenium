@@ -3,6 +3,7 @@ import com.cursoselenium.Pages.LogInPage;
 import com.cursoselenium.Pages.SignUpPage;
 import com.cursoselenium.Pages.VoteToursPage;
 import com.cursoselenium.library.configuration.TestConfiguration;
+import com.cursoselenium.library.configuration.TestLogger;
 import org.testng.annotations.Test;
 
 /*
@@ -27,6 +28,9 @@ public class Test1 extends TestConfiguration{
         signUpPage.introduceName("Pablo");
         signUpPage.introduceYear("2020");
         voteToursPage = signUpPage.goToVoteToursPage();
+
+        
+        
     }
     
 }

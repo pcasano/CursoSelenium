@@ -18,11 +18,11 @@ public VoteToursPage(){
 }
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Tours de votación");   
+        Assert.assertEquals(DRIVER.findElement(By.xpath("main-title"), "get text of element").getText(), "Tours de votación");   
     }
    
     public void clcikOnAction(){
-        this.driver.findElement(By.xpath("//*[@class='ttitle' and text()='Acción']")).click();
+        DRIVER.clickElement(By.xpath("//*[@class='ttitle' and text()='Acción']"), "click on Action films");
     }
     
 }

@@ -23,22 +23,19 @@ public class LogInPage extends BasePage{
     
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(this.driver.findElement(By.id("main-title")).getText(), "Inicio de sesión");       
+        Assert.assertEquals(DRIVER.findElement(By.xpath("main-title"), "get text of element").getText(), "Inicio de sesión");       
     }  
     
     public void introduceEmail(String email){
-        WebElement emailInput = this.driver.findElement(By.name("username"));
-        emailInput.clear();
-        emailInput.sendKeys(email);
+
+        DRIVER.fillInput(By.name("username"), email, "introduce email: "+ email);
     }
     public void introducePassword(String password){
-        WebElement emailPassword = this.driver.findElement(By.name("password"));
-        emailPassword.clear();
-        emailPassword.sendKeys(password);
+        DRIVER.fillInput(By.name("password"), password, "introduce password: "+ password);
     }    
     
     public void clickOkButton(){
-        this.driver.findElement(By.name("ok")).click();
+        DRIVER.clickElement(By.name("ok"), "click on OK button");
     }  
     
     
