@@ -19,11 +19,14 @@ public VoteToursPage(){
 }
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(DRIVER.findElement(By.xpath("main-title"), "get text of element").getText(), "Tours de votación");   
+        ASSERT.elementIsDisplayedAndTextEquals(
+                By.id("main-title"), 
+                "Tours de votación", 
+                "check VoteTours Page title"
+        );
     }
    
     public void clcikOnAction(){
-        //DRIVER.clickElement(By.xpath("//*[@class='ttitle' and text()='Acción']"), "click on Action films");
         DRIVER.clickElement(new XpathBuilder().attribute("class", "ttitle").text("Acción").toBy(), "click on Action films");
     }
     

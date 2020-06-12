@@ -23,7 +23,11 @@ public class LogInPage extends BasePage{
     
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(DRIVER.findElement(By.xpath("main-title"), "get text of element").getText(), "Inicio de sesión");       
+        ASSERT.elementIsDisplayedAndTextEquals(
+                By.id("main-title"), 
+                "Inicio de sesión", 
+                "check LogIn Page title"
+        );        
     }  
     
     public void introduceEmail(String email){

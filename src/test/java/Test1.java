@@ -3,8 +3,8 @@ import com.cursoselenium.Pages.LogInPage;
 import com.cursoselenium.Pages.SignUpPage;
 import com.cursoselenium.Pages.VoteToursPage;
 import com.cursoselenium.library.configuration.TestConfiguration;
-import com.cursoselenium.library.configuration.TestLogger;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,17 +20,19 @@ public class Test1 extends TestConfiguration{
     
     @Test
     public void test1(){
+        SoftAssert softAssert = new SoftAssert();
         VoteToursPage voteToursPage = new VoteToursPage();
         LogInPage logInPage = voteToursPage.goToLogInPage();
         logInPage.introduceEmail(configFileReader.getHashMap().get("user"));
         logInPage.introducePassword(configFileReader.getHashMap().get("password"));
         SignUpPage signUpPage = logInPage.goToSignUpPage();
+        signUpPage.checkTags(softAssert);
         signUpPage.introduceName("Pablo");
         signUpPage.introduceYear("2020");
         voteToursPage = signUpPage.goToVoteToursPage();
-
         
         
+        softAssert.assertAll();
     }
     
 }

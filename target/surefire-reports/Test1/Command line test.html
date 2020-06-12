@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jun 05 16:42:28 CEST 2020</td>
+<td>Started on:</td><td>Fri Jun 12 12:19:22 CEST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>35 seconds (35033 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12589 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,23 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Test1.test1()'><b>test1</b><br>Test class: Test1</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-533NIJM&apos;, ip: &apos;192.168.178.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at com.cursoselenium.library.actions.SeleniumActions.fillInput(SeleniumActions.java:202)
-	at com.cursoselenium.Pages.SignUpPage.introduceYear(SignUpPage.java:39)
-	at Test1.test1(Test1.java:29)
+<td><div><pre>java.lang.AssertionError: expected [Tours de votación_] but found [Tours de votación]
+	at com.cursoselenium.library.checks.HardAssertTest.elementIsDisplayedAndTextEquals(HardAssertTest.java:54)
+	at com.cursoselenium.Pages.VoteToursPage.confirmIdentity(VoteToursPage.java:23)
+	at com.cursoselenium.Pages.VoteToursPage.&lt;init&gt;(VoteToursPage.java:18)
+	at Test1.test1(Test1.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace307411297", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace307411297'><pre>org.openqa.selenium.NoSuchElementException: 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-533NIJM&apos;, ip: &apos;192.168.178.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at com.cursoselenium.library.actions.SeleniumActions.fillInput(SeleniumActions.java:202)
-	at com.cursoselenium.Pages.SignUpPage.introduceYear(SignUpPage.java:39)
-	at Test1.test1(Test1.java:29)
+... Removed 41 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace544966217", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace544966217'><pre>java.lang.AssertionError: expected [Tours de votación_] but found [Tours de votación]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at com.cursoselenium.library.checks.HardAssertTest.elementIsDisplayedAndTextEquals(HardAssertTest.java:54)
+	at com.cursoselenium.Pages.VoteToursPage.confirmIdentity(VoteToursPage.java:23)
+	at com.cursoselenium.Pages.VoteToursPage.&lt;init&gt;(VoteToursPage.java:18)
+	at Test1.test1(Test1.java:24)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,7 +131,7 @@ Driver info: driver.version: unknown
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </pre></div></td>
-<td>20</td>
+<td>0</td>
 <td>Test1@3891771e</td></tr>
 </table><p>
 </body>

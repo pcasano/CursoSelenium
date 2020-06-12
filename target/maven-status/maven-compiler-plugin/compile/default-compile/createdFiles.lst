@@ -1,9 +1,12 @@
 com\cursoselenium\Pages\VoteToursPage.class
+com\cursoselenium\library\checks\HardAssertTest.class
+com\cursoselenium\library\configuration\ConfigFileReader.class
+com\cursoselenium\library\checks\SoftAssertTest.class
 com\cursoselenium\library\configuration\TestLogger.class
 com\cursoselenium\library\configuration\TestConfiguration.class
 com\cursoselenium\NewMain.class
 com\cursoselenium\Pages\LogInPage.class
-com\cursoselenium\library\configuration\ConfigFileReader.class
+com\cursoselenium\library\checks\AssertTest.class
 com\cursoselenium\Pages\BasePage.class
 com\cursoselenium\library\actions\SeleniumActions.class
 com\cursoselenium\library\actions\XpathBuilder.class

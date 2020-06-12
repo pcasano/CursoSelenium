@@ -2,33 +2,31 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-05T16:42:28 CEST" name="Test1" finished-at="2020-06-05T16:43:03 CEST" duration-ms="35033">
+  <suite started-at="2020-06-12T12:19:22 CEST" name="Test1" finished-at="2020-06-12T12:19:35 CEST" duration-ms="12589">
     <groups>
     </groups>
-    <test started-at="2020-06-05T16:42:28 CEST" name="Command line test" finished-at="2020-06-05T16:43:03 CEST" duration-ms="35033">
+    <test started-at="2020-06-12T12:19:22 CEST" name="Command line test" finished-at="2020-06-12T12:19:35 CEST" duration-ms="12589">
       <class name="Test1">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test1@3891771e]" started-at="2020-06-05T16:42:28 CEST" name="setUp" finished-at="2020-06-05T16:42:42 CEST" duration-ms="14079" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test1@3891771e]" started-at="2020-06-12T12:19:22 CEST" name="setUp" finished-at="2020-06-12T12:19:34 CEST" duration-ms="12124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test1()[pri:0, instance:Test1@3891771e]" started-at="2020-06-05T16:42:42 CEST" name="test1" finished-at="2020-06-05T16:43:03 CEST" duration-ms="20869" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="test1()[pri:0, instance:Test1@3891771e]" started-at="2020-06-12T12:19:34 CEST" name="test1" finished-at="2020-06-12T12:19:34 CEST" duration-ms="361" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-533NIJM', ip: '192.168.178.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: driver.version: unknown]]>
+              <![CDATA[expected [Tours de votación_] but found [Tours de votación]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-533NIJM', ip: '192.168.178.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.2'
-Driver info: driver.version: unknown
-at com.cursoselenium.library.actions.SeleniumActions.fillInput(SeleniumActions.java:202)
-at com.cursoselenium.Pages.SignUpPage.introduceYear(SignUpPage.java:39)
-at Test1.test1(Test1.java:29)
+              <![CDATA[java.lang.AssertionError: expected [Tours de votación_] but found [Tours de votación]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.cursoselenium.library.checks.HardAssertTest.elementIsDisplayedAndTextEquals(HardAssertTest.java:54)
+at com.cursoselenium.Pages.VoteToursPage.confirmIdentity(VoteToursPage.java:23)
+at com.cursoselenium.Pages.VoteToursPage.<init>(VoteToursPage.java:18)
+at Test1.test1(Test1.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -68,11 +66,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test1@3891771e]" started-at="2020-06-05T16:43:03 CEST" name="tearDown" finished-at="2020-06-05T16:43:03 CEST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test1@3891771e]" started-at="2020-06-12T12:19:35 CEST" name="tearDown" finished-at="2020-06-12T12:19:35 CEST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -14,7 +14,9 @@ public class TestLogger {
     private static Logger log = Logger.getLogger(TestLogger.class);
     
     public static void setInfoLog(String message){
-        log.info(message);
+        if(!message.isEmpty()){
+            log.info(message);
+        }        
     }
     public static void setErrorLog(String message){
         log.error(message);

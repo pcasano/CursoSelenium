@@ -128,16 +128,13 @@
                   <a name="test1">
                   </a> <!-- test1 -->
                   <span class="method-name">test1</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: 
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-533NIJM&apos;, ip: &apos;192.168.178.30&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;12.0.2&apos;
-Driver info: driver.version: unknown
-	at com.cursoselenium.library.actions.SeleniumActions.fillInput(SeleniumActions.java:202)
-	at com.cursoselenium.Pages.SignUpPage.introduceYear(SignUpPage.java:39)
-	at Test1.test1(Test1.java:29)
+                  <div class="stack-trace">java.lang.AssertionError: expected [Tours de votación_] but found [Tours de votación]
+	at com.cursoselenium.library.checks.HardAssertTest.elementIsDisplayedAndTextEquals(HardAssertTest.java:54)
+	at com.cursoselenium.Pages.VoteToursPage.confirmIdentity(VoteToursPage.java:23)
+	at com.cursoselenium.Pages.VoteToursPage.&lt;init&gt;(VoteToursPage.java:18)
+	at Test1.test1(Test1.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 36 stack frames
+... Removed 41 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -198,12 +195,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test1')
 data.setCell(0, 2, 'Test1')
-data.setCell(0, 3, 20869);
+data.setCell(0, 3, 361);
 window.suiteTableData['Test1']= { tableData: data, tableDiv: 'times-div-Test1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 361 ms</span>
               <div id="times-div-Test1">
               </div> <!-- times-div-Test1 -->
             </div> <!-- times-div -->
@@ -238,11 +235,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">test1</span>
-                <span class="method-start">14119 ms</span>
+                <span class="method-start">12160 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34999 ms</span>
+                <span class="method-start">12538 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

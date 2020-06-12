@@ -5,9 +5,9 @@
  */
 package com.cursoselenium.Pages;
 
+import com.cursoselenium.library.actions.XpathBuilder;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 
 
@@ -23,7 +23,11 @@ public class SignUpPage extends BasePage{
     
     @Override
     public void confirmIdentity() {
-        Assert.assertEquals(DRIVER.findElement(By.xpath("main-title"), "get text of element").getText(), "Regístrate (es gratis)");       
+        ASSERT.elementIsDisplayedAndTextEquals(
+                By.id("main-title"), 
+                "Regístrate (es gratis)", 
+                "check SignUp Page title"
+        );          
     }
     public void introduceName(String name){
 
@@ -31,7 +35,24 @@ public class SignUpPage extends BasePage{
     }    
 
     public void introduceYear(String year){
-        DRIVER.fillInput(By.name("year_"), 12 , year, "introduce year: "+ year);
-    }     
+        DRIVER.fillInput(By.name("year"), 12 , year, "introduce year: "+ year);
+    } 
+    
+    public void checkTags(SoftAssert softAssert){
+        VERIFY.elementIsDisplayedAndTextEquals(
+                softAssert, 
+                new XpathBuilder().any("input").attribute("name", "nick").parent("div").child("div").toBy(), 
+                "Nombre/Nick", 
+                "check tag Name"
+        );
+        VERIFY.elementIsDisplayedAndTextEquals(
+                softAssert, 
+                new XpathBuilder().any("input").attribute("name", "year").parent("div").child("div").toBy(), 
+                "Año de nacimiento:", 
+                "check tag year"
+        );        
+        
+    }
+ 
     
 }
