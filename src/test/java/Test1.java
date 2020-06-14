@@ -3,6 +3,7 @@ import com.cursoselenium.Pages.LogInPage;
 import com.cursoselenium.Pages.SignUpPage;
 import com.cursoselenium.Pages.VoteToursPage;
 import com.cursoselenium.library.configuration.TestConfiguration;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -17,6 +18,11 @@ import org.testng.asserts.SoftAssert;
  * @author pablo
  */
 public class Test1 extends TestConfiguration{
+    
+    @BeforeSuite
+    public void setTestCaseName(){ 
+        this.testCaseName = Test1.class.getName();
+    }   
     
     @Test
     public void test1(){

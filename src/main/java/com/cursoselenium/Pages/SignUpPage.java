@@ -38,7 +38,7 @@ public class SignUpPage extends BasePage{
         DRIVER.fillInput(By.name("year"), 12 , year, "introduce year: "+ year);
     } 
     
-    public void checkTags(SoftAssert softAssert){
+    public void checkTags(SoftAssert softAssert){       
         VERIFY.elementIsDisplayedAndTextEquals(
                 softAssert, 
                 new XpathBuilder().any("input").attribute("name", "nick").parent("div").child("div").toBy(), 
