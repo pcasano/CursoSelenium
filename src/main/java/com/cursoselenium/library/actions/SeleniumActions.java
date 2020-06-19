@@ -36,7 +36,9 @@ public class SeleniumActions {
         System.out.println("");
     }
     private void setMessageForRecorder(String message, boolean success, String image){
-        RECORDER_MESSAGES.setMessageForRecorder(message, success, image);
+        if(!message.isEmpty()){
+            RECORDER_MESSAGES.setMessageForRecorder(message, success, image);
+        }        
     }             
     public WebElement findElement(By by, String message){
         String image; 

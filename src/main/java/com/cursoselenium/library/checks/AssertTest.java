@@ -23,7 +23,9 @@ public class AssertTest {
         return Thread.currentThread().getStackTrace();
     }
     private void setMessageForRecorder(String message, boolean success, String image){
-        RECORDER_MESSAGES.setMessageForRecorder(message, success, image);
+        if(!message.isEmpty()){
+            RECORDER_MESSAGES.setMessageForRecorder(message, success, image);
+        }        
     }     
     private void setStackTraceForLogger(){
         StackTraceElement[] stackTrace = this.stackTrace();
