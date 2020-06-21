@@ -29,12 +29,11 @@ public class TopFilmAffinityFilterTest extends TestConfiguration{
         VoteToursPage voteToursPage = new VoteToursPage();
         voteToursPage.acceptCookies();
         TopFilmaffinityPage topFilmaffinityPage = voteToursPage.goToTopFilmaffinityPage();
-        topFilmaffinityPage.introdueCountry("Estados Unidos");
-        topFilmaffinityPage.clickOnApplyFilter();
-        topFilmaffinityPage.checkFlags(softAssert);
+        topFilmaffinityPage.introdueCountry("Estados Unidos");        
         topFilmaffinityPage.setFromYear("2020");
         topFilmaffinityPage.setUntilYear("2020");
         topFilmaffinityPage.clickOnApplyFilter();
+        topFilmaffinityPage.checkFlags(softAssert);
         topFilmaffinityPage.checkYears(softAssert);                
         softAssert.assertAll();
     }
