@@ -90,10 +90,7 @@ public class HtmlGenerator {
         ul = new Ul();
         for(String stack:element.getStackTraceArray()){
             ul.appendChild(new Li().appendText(stack));
-        }
-            System.out.println("data:image/png;base64,"+element.getImage());
-        
-        
+        }   
         img = new Img("screenshot","data:image/jpg;base64,"+element.getImage());
         img.setHeight("450");
         img.setWidth("800");
