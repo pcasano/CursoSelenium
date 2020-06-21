@@ -28,6 +28,7 @@ public class Test1 extends TestConfiguration{
     public void test1(){
         SoftAssert softAssert = new SoftAssert();
         VoteToursPage voteToursPage = new VoteToursPage();
+        voteToursPage.acceptCookies();
         LogInPage logInPage = voteToursPage.goToLogInPage();
         logInPage.introduceEmail(configFileReader.getHashMap().get("user"));
         logInPage.introducePassword(configFileReader.getHashMap().get("password"));
