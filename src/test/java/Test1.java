@@ -30,8 +30,8 @@ public class Test1 extends TestConfiguration{
         VoteToursPage voteToursPage = new VoteToursPage();
         voteToursPage.acceptCookies();
         LogInPage logInPage = voteToursPage.goToLogInPage();
-        logInPage.introduceEmail(configFileReader.getHashMap().get("user"));
-        logInPage.introducePassword(configFileReader.getHashMap().get("password"));
+        logInPage.introduceEmail(configuration.getUser());
+        logInPage.introducePassword(configuration.getPassword());
         SignUpPage signUpPage = logInPage.goToSignUpPage();
         signUpPage.checkTags(softAssert);
         signUpPage.introduceName("Pablo");

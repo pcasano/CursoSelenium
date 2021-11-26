@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
-<root>
-    <parameters>
-        <browser>firefox</browser>   
-        <portal>https://www.filmaffinity.com/es/tours.php</portal>   
-        <user>Selenium</user>   
-        <password>pass</password> 
-        <closeBrowser>false</closeBrowser> 
-    </parameters>  
-</root>
+<configuration>
+    <browser>firefox</browser>
+    <portal>https://www.filmaffinity.com/es/tours.php</portal>
+    <user>Selenium</user>
+    <password>pass</password>
+    <closeBrowser>false</closeBrowser>
+</configuration>

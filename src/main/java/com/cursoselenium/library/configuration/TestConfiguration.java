@@ -25,6 +25,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import javax.xml.bind.JAXBException;
 
 
 /**
@@ -35,19 +36,21 @@ public class TestConfiguration {
     
     public static WebDriver driver;
     private final String PROPERTY_PATH = "C:\\Users\\pablo\\Documents\\NetBeansProjects\\cursoselenium\\Properties\\config.properties";  
-    private final String PROPERTY_PATH_LOG4J = "C:\\Users\\pablo\\Documents\\NetBeansProjects\\cursoselenium\\Properties\\log4j.properties"; 
-    protected ConfigFileReader configFileReader = new ConfigFileReader();
+    private final String PROPERTY_PATH_LOG4J = "C:\\Users\\pablo\\Documents\\NetBeansProjects\\cursoselenium\\Properties\\log4j.properties";
+    protected Configuration configuration;
+    // protected ConfigFileReader configFileReader = new ConfigFileReader();
     public static long initialTime;
     protected String testCaseName;
     private StringBuilder htmlReportPathSB;
     public static ArrayList<RecorderElements> listOfMessagesForReport = new ArrayList<>();
-    public static ArrayList<String[]> listOfStackForReport;    
-        
+    public static ArrayList<String[]> listOfStackForReport;
+
+
     @BeforeClass
-    public void setUp() throws FileNotFoundException, IOException {
-        initialTime = new Date().getTime();        
-        configFileReader.extractParameter();        
-        String browser = configFileReader.getHashMap().get("browser");        
+    public void setUp() throws FileNotFoundException, IOException, JAXBException {
+        initialTime = new Date().getTime();
+        configuration = new Unmarshaler().unmarshal();
+        String browser = configuration.getBrowser();
         InputStream input = new FileInputStream(PROPERTY_PATH);
         InputStream inputPropLog4J = new FileInputStream(PROPERTY_PATH_LOG4J);
         Properties prop = new Properties();
@@ -72,7 +75,7 @@ public class TestConfiguration {
         driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.get(configFileReader.getHashMap().get("portal"));        
+        driver.get(configuration.getPortal());
     }
     
     
@@ -88,9 +91,7 @@ public class TestConfiguration {
         recorderConfiguration.setNumberOfFailedTests(context.getFailedTests().size());
         recorderConfiguration.setTestCaseName(testCaseName);
         recorderConfiguration.setPathHtmlReport(reportPath);
-        ConfigFileReader configFileReader = new ConfigFileReader();
-        configFileReader.extractParameter(); 
-        if(configFileReader.getHashMap().get("closeBrowser").equals("true")){
+        if(configuration.getCloseBrowser().equals("true")){
             driver.quit();
         }
         HtmlGenerator htmlGenerator = new HtmlGenerator(listOfMessagesForReport, recorderConfiguration);
