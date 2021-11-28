@@ -6,7 +6,7 @@
 package com.cursoselenium.Pages;
 
 import com.cursoselenium.library.actions.SeleniumActions;
-import com.cursoselenium.library.actions.XpathBuilder;
+import com.cursoselenium.library.actions.xpathbuilder.XpathBuilder;
 import com.cursoselenium.library.checks.HardAssertTest;
 import com.cursoselenium.library.checks.SoftAssertTest;
 import com.cursoselenium.library.configuration.TestConfiguration;
@@ -39,12 +39,12 @@ public abstract class BasePage {
         return new SignUpPage();
     }
     public TopFilmaffinityPage goToTopFilmaffinityPage(){
-        DRIVER.clickElement(new XpathBuilder().any().text("Top Filmaffinity").toBy(), "navigate to Top Filmaffinity Page");
+        DRIVER.clickElement(XpathBuilder.any().text("Top Filmaffinity").toBy(), "navigate to Top Filmaffinity Page");
         return new TopFilmaffinityPage();
     }   
     public void acceptCookies(){
-        DRIVER.clickElement(new XpathBuilder().any().id("qcCmpButtons").child("button").textContains("Acepto").toBy(), "Accept cookies");
+        DRIVER.clickElement(XpathBuilder.any("button").textContains("ACEPTO").toBy(), "Accept cookies");
     }
-    
+
 
 }

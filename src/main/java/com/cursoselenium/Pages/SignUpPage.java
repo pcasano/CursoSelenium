@@ -5,7 +5,7 @@
  */
 package com.cursoselenium.Pages;
 
-import com.cursoselenium.library.actions.XpathBuilder;
+import com.cursoselenium.library.actions.xpathbuilder.XpathBuilder;
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 
@@ -41,13 +41,13 @@ public class SignUpPage extends BasePage{
     public void checkTags(SoftAssert softAssert){       
         VERIFY.elementIsDisplayedAndTextEquals(
                 softAssert, 
-                new XpathBuilder().any("input").attribute("name", "nick").parent("div").child("div").toBy(), 
+                XpathBuilder.any("input").attribute("name", "nick").parent("div").child("div").toBy(),
                 "Nombre/Nick", 
                 "check tag Name"
         );
         VERIFY.elementIsDisplayedAndTextEquals(
                 softAssert, 
-                new XpathBuilder().any("input").attribute("name", "year").parent("div").child("div").toBy(), 
+                XpathBuilder.any("input").attribute("name", "year").parent("div").child("div").toBy(),
                 "Año de nacimiento:", 
                 "check tag year"
         );        

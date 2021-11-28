@@ -5,9 +5,8 @@
  */
 package com.cursoselenium.Pages;
 
-import com.cursoselenium.library.actions.XpathBuilder;
+import com.cursoselenium.library.actions.xpathbuilder.XpathBuilder;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 /**
  *
@@ -27,7 +26,7 @@ public VoteToursPage(){
     }
    
     public void clcikOnAction(){
-        DRIVER.clickElement(new XpathBuilder().attribute("class", "ttitle").text("Acción").toBy(), "click on Action films");
+        DRIVER.clickElement(XpathBuilder.any().attribute("class", "ttitle").text("Acción").toBy(), "click on Action films");
     }
     
 }
