@@ -61,7 +61,16 @@ public class XpathFragment {
         return this;
     }
 
+    public XpathFragment attributeEndsWith(String attribute, String value) {
+        sb.append("[string-length(substring-before(@").append(attribute).append(", '").append(value)
+                .append("')) >= 0 and string-length(substring-after(@").append(attribute).append(", '")
+                .append(value).append("')) = 0 and contains(@").append(attribute)
+                .append(", '").append(value).append("')]");
+        return this;
+    }
+
     public XpathFragment id(String value) {
+
         return this.attribute("id", value);
     }
 
